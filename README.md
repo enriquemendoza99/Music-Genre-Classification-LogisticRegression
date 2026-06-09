@@ -1,4 +1,4 @@
-# The Outlier Detectives - Project 2: Logistic Regression and Friends
+# Music Genre Classification with Logistic Regression and SVM
 ## Instructions
 1. Create a virtual environment using 'python3 -m venv runenv'
 2. Activate the virtual environment using 'source runenv/bin/activate'
