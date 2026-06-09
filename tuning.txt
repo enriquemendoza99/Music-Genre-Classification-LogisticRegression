@@ -1,0 +1,88 @@
+Hyperparameter Tuning Experiments and Results:
+
+Models:
+
+Logistic Regression:
+Original training parameters: alpha=0.2, iterations=1000, lambdaparam=0.01
+Balanced Accuracy: 0.6333
+
+    Testing:
+    (Learning rate) alpha= 0.0001, 0.001, 0.01, 0.1
+    iterations= 500, 1000, 2500, 5000
+    (Regularization) lambdaparam= 0.0001, 0.01, 0.1, 1.0
+
+    Fitting 3 folds for each of 64 candidates, totalling 192 fits
+    Best Hyperparameters for Logistic Regression:
+    {'alpha': 0.1, 'iterations': 5000, 'lambdaparam': 0.1}
+    Best cross-validation score: 0.6353
+
+    Predicting from Logistic Regression Model with Best Hyperparameters
+    Logistic Regression Model Predictions Complete
+    Balanced Accuracy with Best Hyperparameters: 0.6333
+
+
+--------------------------------------------------------------------------------------------------------------
+Support Vector Machine:
+Original training parameters: kernel='rbf', C=10, gamma='scale'
+Balanced Accuracy: 0.6278
+
+    Testing:
+    kernel= 'linear', 'rbf', 'poly', 'sigmoid'
+    (Regularization) C= 0.1, 25, 50, 100
+    gamma= 0.001, 0.01, 0.1, 1
+
+    Fitting 3 folds for each of 64 candidates, totalling 192 fits
+    Best Hyperparameters for SVM:
+    {'C': 100, 'gamma': 0.01, 'kernel': 'rbf'}
+    Best cross-validation score: 0.6764
+
+    Predicting from SVM Model with Best Hyperparameters
+    SVM Model Predictions Complete
+    Balanced Accuracy with Best Hyperparameters: 0.7056
+
+
+--------------------------------------------------------------------------------------------------------------
+Gradient Boosting: 
+Original training parameters: n_estimators=100, learning_rate=0.1, max_depth=5
+Balanced Accuracy: 0.5500
+
+    Testing:
+    n_estimators= 100, 250, 500, 1000
+    learning_rate= 0.01, 0.1, 0.2, 0.3
+    max_depth= 3, 5, 8, 10
+
+    Fitting 3 folds for each of 64 candidates, totalling 192 fits
+    Best Hyperparameters for GBC:
+    {'learning_rate': 0.3, 'max_depth': 3, 'n_estimators': 250}
+    Best cross-validation score: 0.5917
+
+    Predicting from GBC Model with Best Hyperparameters
+    GBC Model Predictions Complete
+    Balanced Accuracy with Best Hyperparameters: 0.6000
+
+
+--------------------------------------------------------------------------------------------------------------
+Gaussian Naive Bayes: default var_smoothing=1e-9
+Original training parameters:
+Balanced Accuracy: 0.5389
+
+    No experiments where run for hypertuning GNB since there is very few
+
+
+--------------------------------------------------------------------------------------------------------------
+Random Forrest: n_estimators=100, random_state=42
+Original training parameters:
+Balanced Accuracy: 0.6000
+
+    Testing:
+    n_estimators= 100, 250, 500, 1000
+    max_depth= 3, 8, 14, 20
+
+    Fitting 3 folds for each of 16 candidates, totalling 48 fits
+    Best Hyperparameters for Random Forest:
+    {'max_depth': 20, 'n_estimators': 500}
+    Best cross-validation score: 0.6528
+
+    Predicting from Random Forest Model with Best Hyperparameters
+    Random Forest Model Predictions Complete
+    Balanced Accuracy with Best Hyperparameters: 0.6389
