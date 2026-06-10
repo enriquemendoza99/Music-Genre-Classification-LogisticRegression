@@ -16,4 +16,4 @@
 
 ## Kaggle Outcome
 1. Kaggle Date Run: November 8, 2025
-2. Kaggle Accuracy Score: 0.62000 -> 62.000%
+2. Kaggle Accuracy Score: 0.756000 -> 75.600%
